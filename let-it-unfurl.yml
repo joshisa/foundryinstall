@@ -1,0 +1,15 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+ name: say-something
+ namespace: default
+spec:
+ template:
+   metadata:
+     name: say-something
+   spec:
+     containers:
+     - name: say-something
+       image: busybox
+       command: ["echo", "Running a job"]
+     restartPolicy: OnFailure
