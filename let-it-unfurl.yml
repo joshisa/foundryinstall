@@ -20,5 +20,10 @@ spec:
             valueFrom:
               secretKeyRef:
                 name: ocp-token-secret
-                key: token
+                key: OCP_TOKEN
+          - name: DO_TOKEN
+            valueFrom:
+              secretKeyRef:
+                name: ocp-token-secret
+                key: DO_TOKEN
      restartPolicy: OnFailure
