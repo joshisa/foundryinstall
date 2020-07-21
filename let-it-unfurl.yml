@@ -17,4 +17,10 @@ spec:
        value: "https://c102-e.us-south.containers.cloud.ibm.com:32737"
      - name: BACKEND
        value: OpenShift
+     env:
+        - name: OCP_TOKEN
+          valueFrom:
+            secretKeyRef:
+              name: ocp-token-secret
+              key: token
      restartPolicy: OnFailure
