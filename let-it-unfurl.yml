@@ -16,10 +16,6 @@ spec:
         - configMapRef:
             name: install-env-list
        env:
-          - name: OCP_SERVER
-            value: "https://c102-e.us-south.containers.cloud.ibm.com:32737"
-          - name: BACKEND
-            value: OpenShift
           - name: OCP_TOKEN
             valueFrom:
               secretKeyRef:
