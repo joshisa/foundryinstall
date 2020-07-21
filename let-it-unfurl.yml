@@ -12,6 +12,9 @@ spec:
      - name: founderinstaller
        image: image-registry.openshift-image-registry.svc:5000/default/kubecf-install
        command: ["/installer/check-ocp-cluster.sh"]
+       envFrom:
+        - configMapRef:
+            name: install-env-list
        env:
           - name: OCP_SERVER
             value: "https://c102-e.us-south.containers.cloud.ibm.com:32737"
